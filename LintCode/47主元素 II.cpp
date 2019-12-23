@@ -1,7 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <stack>
-#include <queue>
 #include <algorithm>
 #include <unordered_map>
 
@@ -9,12 +7,12 @@
 using namespace std;
 
 
-//47. Ö÷ÔªËØ II
-//ÄúµÄÌá½»´ò°ÜÁË 30.80% µÄÌá½»!
-//Ê¹ÓÃ¹şÏ£±í¿Õ¼ä¸´ÔÓ¶ÈO(n),Ê±¼ä¸´ÔÓ¶ÈÎªO(n);
+//47. ä¸»å…ƒç´  II
+//æ‚¨çš„æäº¤æ‰“è´¥äº† 30.80% çš„æäº¤!
+//ä½¿ç”¨å“ˆå¸Œè¡¨ç©ºé—´å¤æ‚åº¦O(n),æ—¶é—´å¤æ‚åº¦ä¸ºO(n);
 //int majorityNumber(vector<int> &nums) {
 //	// write your code here
-//	//ÓÃ¹şÏ£±í
+//	//ç”¨å“ˆå¸Œè¡¨
 //	int n = nums.size();
 //	unordered_map<int, int>result;
 //	for (int i = 0; i<n; i++)
@@ -58,8 +56,8 @@ void quicksort(vector<int>&a, int left, int right)
 	}
 }
 
-//Ê¹ÓÃ¿ìÅÅËã·¨À´×öµÄ»°£¬Ê±¼ä¸´ÔÓ¶ÈÎªO(nlgn)
-//ÄúµÄÌá½»´ò°ÜÁË 82.80% µÄÌá½»!
+//ä½¿ç”¨å¿«æ’ç®—æ³•æ¥åšçš„è¯ï¼Œæ—¶é—´å¤æ‚åº¦ä¸ºO(nlgn)
+//æ‚¨çš„æäº¤æ‰“è´¥äº† 82.80% çš„æäº¤!
 //int majorityNumber(vector<int> &nums) {
 //	// write your code here
 //	if (nums.empty())
@@ -67,7 +65,7 @@ void quicksort(vector<int>&a, int left, int right)
 //		return 0;
 //	}
 //	int len = nums.size();
-//	sort(nums.begin(), nums.end());//Ê¹ÓÃÅÅĞòËã·¨
+//	sort(nums.begin(), nums.end());//ä½¿ç”¨æ’åºç®—æ³•
 //	int count = 1;
 //	for (int i = 0; i < len - 1; i++)
 //	{
@@ -85,10 +83,10 @@ void quicksort(vector<int>&a, int left, int right)
 //}
 
 
-//ÓÅĞãËã·¨
-//Ê¹ÓÃÃ¶¾ÙËã·¨
-//Ëã·¨µÄÊ±¼ä¸´ÔÓ¶ÈÎªO(n),¿Õ¼ä¸´ÔÓ¶ÈO(1),ÕâÒ²ÊÇÌâÄ¿ÒªÇó
-//ÄúµÄÌá½»´ò°ÜÁË 44.40% µÄÌá½»!
+//ä¼˜ç§€ç®—æ³•
+//ä½¿ç”¨æšä¸¾ç®—æ³•
+//ç®—æ³•çš„æ—¶é—´å¤æ‚åº¦ä¸ºO(n),ç©ºé—´å¤æ‚åº¦O(1),è¿™ä¹Ÿæ˜¯é¢˜ç›®è¦æ±‚
+//æ‚¨çš„æäº¤æ‰“è´¥äº† 44.40% çš„æäº¤!
 int majorityNumber(vector<int> &nums) {
 	// write your code here
 	if (nums.empty())
