@@ -1,15 +1,13 @@
 #include <iostream>
 #include <vector>
-#include <stack>
-#include <queue>
 #include <algorithm>
 
 
 using namespace std;
 
 
-//46. Ö÷ÔªËØ
-//ÄúµÄÌá½»´ò°ÜÁË 13.80% µÄÌá½»!
+//46. ä¸»å…ƒç´ 
+//æ‚¨çš„æäº¤æ‰“è´¥äº† 13.80% çš„æäº¤!
 bool CheckMore(vector<int>&nums, int len, int res)
 {
 	if (nums.empty())
