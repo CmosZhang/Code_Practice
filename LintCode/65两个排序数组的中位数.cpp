@@ -82,12 +82,10 @@ int main(){
 	vector<int>B = { 2,3,4,5 };
 
 	double res = findMedianSortedArrays(A, B);
-	for (int i = 0; i < A.size(); i++)
-	{
-		cout << A[i] << " ";
-	}
-
-	cout << endl;
+	//for (int i = 0; i < A.size(); i++){
+		//cout << A[i] << " ";
+	//}
+	//cout << endl;
 	cout << res << endl;
 	system("pause");
 	return 0;
