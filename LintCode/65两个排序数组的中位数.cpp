@@ -6,20 +6,20 @@
 
 using namespace std;
 
-//65. Á½¸öÅÅĞòÊı×éµÄÖĞÎ»Êı
-//ÌôÕ½
-//Ê±¼ä¸´ÔÓ¶ÈÎªO(log n)
-//ÄúµÄÌá½»´ò°ÜÁË 7.20% µÄÌá½»!
+//65. ä¸¤ä¸ªæ’åºæ•°ç»„çš„ä¸­ä½æ•°
+//æŒ‘æˆ˜
+//æ—¶é—´å¤æ‚åº¦ä¸ºO(log n)
+//æ‚¨çš„æäº¤æ‰“è´¥äº† 7.20% çš„æäº¤!
 
-//Ñ¡ÔñÅÅĞò
-void SelectSort(vector<int>&a, int n){ //Ñ¡ÔñÅÅĞò
+//é€‰æ‹©æ’åº
+void SelectSort(vector<int>&a, int n){ //é€‰æ‹©æ’åº
 	int mix, temp;
-	for (int i = 0; i<n - 1; i++){//Ã¿´ÎÑ­»·Êı×é£¬ÕÒ³ö×îĞ¡µÄÔªËØ£¬·ÅÔÚÇ°Ãæ£¬Ç°ÃæµÄ¼´ÎªÅÅĞòºÃµÄ
-		mix = i; //¼ÙÉè×îĞ¡ÔªËØµÄÏÂ±ê
-		for (int j = i + 1; j<n; j++) //½«ÉÏÃæ¼ÙÉèµÄ×îĞ¡ÔªËØÓëÊı×é±È½Ï£¬½»»»³ö×îĞ¡µÄÔªËØµÄÏÂ±ê
+	for (int i = 0; i<n - 1; i++){//æ¯æ¬¡å¾ªç¯æ•°ç»„ï¼Œæ‰¾å‡ºæœ€å°çš„å…ƒç´ ï¼Œæ”¾åœ¨å‰é¢ï¼Œå‰é¢çš„å³ä¸ºæ’åºå¥½çš„
+		mix = i; //å‡è®¾æœ€å°å…ƒç´ çš„ä¸‹æ ‡
+		for (int j = i + 1; j<n; j++) //å°†ä¸Šé¢å‡è®¾çš„æœ€å°å…ƒç´ ä¸æ•°ç»„æ¯”è¾ƒï¼Œäº¤æ¢å‡ºæœ€å°çš„å…ƒç´ çš„ä¸‹æ ‡
 			if (a[j]<a[mix])
 				mix = j;
-		//ÈôÊı×éÖĞÕæµÄÓĞ±È¼ÙÉèµÄÔªËØ»¹Ğ¡£¬¾Í½»»»
+		//è‹¥æ•°ç»„ä¸­çœŸçš„æœ‰æ¯”å‡è®¾çš„å…ƒç´ è¿˜å°ï¼Œå°±äº¤æ¢
 		if (i != mix){
 			temp = a[i];
 			a[i] = a[mix];
@@ -39,10 +39,10 @@ double findMedianSortedArrays(vector<int> &A, vector<int> &B){
 	int m = A.size();
 	int left = 0, right = m;
 
-	//Ñ¡ÔñÅÅĞò
+	//é€‰æ‹©æ’åº
 	SelectSort(A, m);
 	double res;
-	//ÕÒÖĞÎ»Êı
+	//æ‰¾ä¸­ä½æ•°
 	int mid = (left + right) / 2;
 	//cout << mid << endl;
 	if (m % 2 == 0){
@@ -54,6 +54,7 @@ double findMedianSortedArrays(vector<int> &A, vector<int> &B){
 	}
 }
 
+//ç¬¬äºŒç§æ–¹æ³•
 int findKth(vector<int>& nums1, int i, vector<int>& nums2, int j, int k) {
 	if (i >= nums1.size()) return nums2[j + k - 1];
 	if (j >= nums2.size()) return nums1[i + k - 1];
@@ -76,8 +77,7 @@ double findMedianSortedArrays2(vector<int>& nums1, vector<int>& nums2) {
 
 
 
-int main()
-{
+int main(){
 	vector<int>A = { 1,2,3,4,5,6 };
 	vector<int>B = { 2,3,4,5 };
 
@@ -86,7 +86,7 @@ int main()
 	{
 		cout << A[i] << " ";
 	}
-	
+
 	cout << endl;
 	cout << res << endl;
 	system("pause");
