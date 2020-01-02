@@ -5,9 +5,8 @@
 
 using namespace std;
 
-//É¾³ıÅÅĞòÊı×éÖĞÖØ¸´Êı×Ö
-int removeDuplicates(vector<int> &nums) 
-{
+//åˆ é™¤æ’åºæ•°ç»„ä¸­é‡å¤æ•°å­—
+int removeDuplicates(vector<int> &nums) {
 	// write your code here
 	if (nums.size() <= 0)
 	{
@@ -26,9 +25,8 @@ int removeDuplicates(vector<int> &nums)
 }
 
 
-//101É¾³ıÅÅĞòÊı×éÖĞµÄÖØ¸´Êı×Ö II
-int removeDuplicates2(vector<int> &nums)
-{
+//101åˆ é™¤æ’åºæ•°ç»„ä¸­çš„é‡å¤æ•°å­— II
+int removeDuplicates2(vector<int> &nums){
 	// write your code here
 	if (nums.size() <= 0)
 	{
@@ -60,8 +58,7 @@ int removeDuplicates2(vector<int> &nums)
 	//return j;
 }
 
-int main()
-{
+int main(){
 	vector<int> vec;
 	for (int i = 0; i < 7; i++)
 	{
